@@ -2,7 +2,7 @@
     session_start();
 
     if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-        header("location: login.php");
+        header("location: index.php");
         exit;
     }
 
@@ -355,7 +355,7 @@
                         <?php echo $row['tstamp']; ?>
                     </td>
                     
-                    <td> <button type='button' class='edit btn btn-info btn-sm'> <a href='outward_files/<?php echo $row['owfile']; ?>' target='_blank' rel='noopener noreferrer' class='view_btn'>View</a> </button> 
+                    <td> <button type='button' class='btn btn-info btn-sm'> <a href='outward_files/<?php echo $row['owfile']; ?>' target='_blank' rel='noopener noreferrer' class='view_btn'>View</a> </button> 
                     </td>
                     <?php
                         echo"
